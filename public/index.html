@@ -3,201 +3,338 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>InflaScore - Anti-Inflammatory Lifestyle Tracker</title>
-  <meta name="description" content="A lightweight wellness tracker that turns daily habits into an anti-inflammatory lifestyle score.">
+  <title>InflaScore - Anti-inflammatory Diet & Lifestyle Tracker</title>
+  <meta name="description" content="Turn vague wellness goals into a quantifiable daily anti-inflammatory score. Track diet, sleep, movement, stress, supplements, and hydration in 2 minutes.">
+  <meta property="og:title" content="InflaScore - Anti-inflammatory Lifestyle Tracker">
+  <meta property="og:description" content="Your daily anti-inflammatory lifestyle score. Track 6 dimensions in 2 minutes.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<!-- ===== NAV ===== -->
 <header class="site-header">
-  <nav class="nav" aria-label="Main navigation">
+  <nav class="nav container" aria-label="Main navigation">
     <a class="brand" href="index.html" aria-label="InflaScore home">
-      <span class="brand-mark">I</span>
+      <span class="brand-icon">I</span>
       <span>InflaScore</span>
     </a>
     <div class="nav-links">
-      <a href="index.html#score">Score</a>
-      <a href="index.html#daily">Daily log</a>
-      <a href="index.html#insights">Insights</a>
+      <a href="#score">The Score</a>
+      <a href="#dimensions">Dimensions</a>
+      <a href="#how">How It Works</a>
       <a href="privacy.html">Privacy</a>
     </div>
-    <a class="button button-primary nav-cta" href="index.html#download">Get the app</a>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <a href="index.html" class="active">EN</a>
+        <a href="index-zh.html">中文</a>
+      </div>
+      <a class="btn btn-primary" href="#download">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        Get the App
+      </a>
+    </div>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="hero-content">
-      <span class="eyebrow">Anti-inflammatory lifestyle tracker</span>
-      <h1>Turn daily choices into a calmer health signal.</h1>
-      <p class="hero-copy">InflaScore helps you log food, sleep, movement, stress, supplements, and hydration, then translates those habits into one simple lifestyle score.</p>
-      <div class="actions" id="download">
-        <a class="button button-primary" href="#">App Store coming soon</a>
-        <a class="button button-secondary" href="#score">Explore the score</a>
-      </div>
-      <dl class="hero-stats" aria-label="InflaScore tracking summary">
-        <div><dt>6</dt><dd>daily dimensions</dd></div>
-        <div><dt>0-100</dt><dd>behavior score</dd></div>
-        <div><dt>2 min</dt><dd>typical check-in</dd></div>
-      </dl>
-    </div>
 
-    <div class="product-stage" aria-label="InflaScore app preview">
-      <div class="phone-shell">
+<!-- ===== HERO ===== -->
+<section class="hero container">
+  <div class="hero-content">
+    <span class="badge badge-primary">iOS 17+ &middot; SwiftUI &middot; Local-first</span>
+    <h1>Turn daily choices into a calmer health signal.</h1>
+    <p class="hero-sub">InflaScore translates food, sleep, movement, stress, supplements, and hydration into one simple anti-inflammatory lifestyle score &mdash; so you can see what actually works.</p>
+    <div class="hero-actions" id="download">
+      <a class="btn btn-primary btn-lg" href="#">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 16.56 2.93 11.3 4.7 7.72C5.57 5.94 7.36 4.83 9.28 4.8C10.56 4.78 11.76 5.68 12.54 5.68C13.31 5.68 14.78 4.58 16.35 4.75C17.02 4.78 18.85 5.02 20.03 6.76C19.93 6.83 17.67 8.15 17.69 10.87C17.72 14.14 20.56 15.18 20.59 15.19C20.56 15.27 20.12 16.72 19.06 18.2L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+        Download on the App Store
+      </a>
+      <a class="btn btn-ghost btn-lg" href="#score">Explore the Score</a>
+    </div>
+    <div class="hero-metrics">
+      <div>
+        <div class="metric-value">6</div>
+        <div class="metric-label">Daily dimensions</div>
+      </div>
+      <div>
+        <div class="metric-value">0&ndash;100</div>
+        <div class="metric-label">Lifestyle score</div>
+      </div>
+      <div>
+        <div class="metric-value">2 min</div>
+        <div class="metric-label">Typical check-in</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="phone-wrap">
+      <!-- floating cards -->
+      <div class="phone-float phone-float-1">
+        <div style="color:var(--muted);font-size:.72rem;margin-bottom:2px;">Today's Score</div>
+        <div class="val">82 &middot; Optimal</div>
+      </div>
+      <div class="phone-float phone-float-2">
+        <div style="color:var(--muted);font-size:.72rem;margin-bottom:2px;">Weekly Trend</div>
+        <div class="val">+12%</div>
+      </div>
+
+      <!-- phone -->
+      <div class="phone-device">
         <div class="phone-screen">
-          <div class="app-top">
+          <div class="app-status">
             <div>
-              <span>Today</span>
-              <strong>Saturday</strong>
+              <div class="greeting">Today</div>
+              <div class="day">Saturday</div>
             </div>
-            <span class="status-pill">Balanced</span>
+            <span class="status-chip">Balanced</span>
           </div>
-          <div class="score-orbit">
-            <div class="score-ring">
-              <div class="score-ring-inner"><strong>82</strong><span>Optimal</span></div>
+          <div class="app-score">
+            <div class="ring">
+              <div class="ring-inner">
+                <div class="score-num">82</div>
+                <div class="score-label">Optimal</div>
+              </div>
             </div>
           </div>
-          <div class="trend-card">
+          <div class="app-trend">
             <div>
-              <span>Weekly trend</span>
-              <strong>+12%</strong>
+              <div class="label">Weekly trend</div>
+              <div class="value">+12%</div>
             </div>
-            <div class="mini-bars" aria-hidden="true">
-              <span style="height: 34%"></span>
-              <span style="height: 56%"></span>
-              <span style="height: 48%"></span>
-              <span style="height: 72%"></span>
-              <span style="height: 64%"></span>
-              <span style="height: 84%"></span>
+            <div class="mini-bars">
+              <span style="height:34%"></span>
+              <span style="height:56%"></span>
+              <span style="height:48%"></span>
+              <span style="height:72%"></span>
+              <span style="height:64%"></span>
+              <span style="height:84%"></span>
             </div>
           </div>
-          <div class="habit-list">
-            <div><span class="dot green"></span><strong>Diet</strong><em>32 / 40</em></div>
-            <div><span class="dot blue"></span><strong>Sleep</strong><em>21 / 25</em></div>
-            <div><span class="dot coral"></span><strong>Movement</strong><em>13 / 15</em></div>
+          <div class="app-habits">
+            <div class="row"><span class="dot" style="background:var(--mint)"></span><span class="name">Diet</span><span class="pts">32 / 40</span></div>
+            <div class="row"><span class="dot" style="background:var(--blue)"></span><span class="name">Sleep</span><span class="pts">21 / 25</span></div>
+            <div class="row"><span class="dot" style="background:var(--coral)"></span><span class="name">Movement</span><span class="pts">13 / 15</span></div>
           </div>
         </div>
       </div>
-      <div class="floating-note note-one">
-        <strong>Manual first</strong>
-        <span>Build awareness before automation.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section class="problem section">
+  <div class="container">
+    <div class="problem-header reveal">
+      <span class="badge badge-accent">Why it matters</span>
+      <h2>Chronic inflammation is silent.</h2>
+      <p>Fatigue, brain fog, skin flare-ups, digestive discomfort &mdash; these everyday signals often trace back to inflammatory patterns shaped by lifestyle.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="icon">&#x1F9E0;</div>
+        <h3>Brain Fog & Fatigue</h3>
+        <p>Neuroinflammation disrupts focus and energy. Poor sleep and processed diets keep the cycle going.</p>
       </div>
-      <div class="floating-note note-two">
-        <strong>No diagnosis</strong>
-        <span>A behavior guide, not a lab test.</span>
+      <div class="problem-card reveal">
+        <div class="icon">&#x1F41B;</div>
+        <h3>Gut Discomfort</h3>
+        <p>The gut is an inflammation hub. What you eat directly shapes your digestive comfort and immune response.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="icon">&#x1FA7A;</div>
+        <h3>Skin & Recovery</h3>
+        <p>Inflammatory markers show up on your skin and slow physical recovery. Lifestyle patterns are the root cause.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section intro-strip" id="score">
-    <div>
-      <span class="eyebrow">One calm metric</span>
-      <h2>The anti-inflammatory score is built for reflection.</h2>
+<!-- ===== FEATURES ===== -->
+<section class="features section">
+  <div class="container">
+    <div class="features-header reveal">
+      <span class="badge badge-primary">What makes InflaScore different</span>
+      <h2>Not a calorie counter. A lifestyle coach.</h2>
+      <p>We don't count macros or pretend to diagnose. We help you notice the patterns that shape how you feel.</p>
     </div>
-    <p class="lede">The score is a lifestyle behavior indicator from 0 to 100. It helps you notice patterns across everyday choices without pretending to diagnose disease or measure inflammation directly.</p>
-  </section>
-
-  <section class="section score-layout">
-    <article class="score-panel">
-      <div class="score-ring score-ring-large">
-        <div class="score-ring-inner"><strong>82</strong><span>Optimal</span></div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">&#x1F4CA;</div>
+        <h3>One Simple Score</h3>
+        <p>Six lifestyle dimensions collapse into a single 0&ndash;100 anti-inflammatory score. Clear enough to act on, nuanced enough to matter.</p>
       </div>
-      <div class="score-scale" aria-label="Score scale from low to optimal">
-        <span>Low</span>
-        <span>Steady</span>
-        <span>Optimal</span>
+      <div class="feature-card reveal">
+        <div class="feature-icon">&#x26A1;</div>
+        <h3>2-Minute Check-in</h3>
+        <p>No calorie databases. No overbuilt dashboards. Tap through six quick cards and you're done. Designed for real, imperfect days.</p>
       </div>
-    </article>
-    <div class="weight-grid">
-      <article class="weight-card">
-        <span>40%</span>
-        <h3>Diet carries the most weight</h3>
-        <p>Meals shape glucose swings, gut load, and the daily rhythm your body has to respond to.</p>
-      </article>
-      <article class="weight-card">
-        <span>25%</span>
-        <h3>Sleep anchors recovery</h3>
-        <p>Duration and subjective quality represent the repair window that keeps the rest of the score honest.</p>
-      </article>
-      <article class="weight-card">
-        <span>35%</span>
-        <h3>The rest completes the pattern</h3>
-        <p>Movement, stress, supplements, and water turn vague wellness notes into visible daily signals.</p>
-      </article>
+      <div class="feature-card reveal">
+        <div class="feature-icon">&#x1F512;</div>
+        <h3>Local & Private</h3>
+        <p>All data stays on your device. No cloud sync, no accounts, no tracking. Built with SwiftData on iOS 17+ for true local-first privacy.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section" id="daily">
-    <div class="section-heading">
-      <span class="eyebrow">Six daily dimensions</span>
+<!-- ===== SCORE ===== -->
+<section class="score-section section" id="score">
+  <div class="container">
+    <div class="score-split">
+      <div class="score-visual reveal">
+        <div class="score-ring-wrap">
+          <div class="score-ring-lg">
+            <div class="ring-inner">
+              <div class="score-num">82</div>
+              <div class="score-label">Optimal</div>
+            </div>
+          </div>
+        </div>
+        <div class="score-scale" style="max-width:320px;width:100%;">
+          <span>Inflammatory</span>
+          <span>Steady</span>
+          <span>Optimal</span>
+        </div>
+      </div>
+      <div class="score-copy reveal">
+        <span class="badge badge-primary">The Anti-Inflammatory Score</span>
+        <h2>One number that reflects your lifestyle.</h2>
+        <p>The score is a behavior indicator from 0 to 100. It helps you notice patterns across everyday choices without pretending to diagnose disease or measure inflammation directly.</p>
+        <div class="weight-list">
+          <div class="weight-item">
+            <div class="pct">40%</div>
+            <div>
+              <h4>Diet carries the most weight</h4>
+              <p>Meals shape glucose swings, gut load, and the daily rhythm your body responds to.</p>
+            </div>
+          </div>
+          <div class="weight-item">
+            <div class="pct">25%</div>
+            <div>
+              <h4>Sleep anchors recovery</h4>
+              <p>Duration and quality represent the repair window that keeps the rest of the score honest.</p>
+            </div>
+          </div>
+          <div class="weight-item">
+            <div class="pct">35%</div>
+            <div>
+              <h4>The rest completes the pattern</h4>
+              <p>Movement, stress, supplements, and hydration turn vague wellness notes into visible daily signals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIMENSIONS ===== -->
+<section class="dimensions section" id="dimensions">
+  <div class="container">
+    <div class="dims-header reveal">
+      <span class="badge badge-accent">Six Daily Dimensions</span>
       <h2>A fast check-in that still feels complete.</h2>
-      <p class="lede">No calorie database. No overbuilt dashboards. Just the lifestyle signals that matter for a practical anti-inflammatory routine.</p>
+      <p>No calorie database. No overbuilt dashboards. Just the lifestyle signals that matter for a practical anti-inflammatory routine.</p>
     </div>
-    <div class="dimension-grid">
-      <article class="dimension-card">
-        <span class="dimension-icon">01</span>
-        <h3>Diet</h3>
+    <div class="dims-grid">
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">01</span> 🥗 Diet</h3>
         <p>Log anti-inflammatory, neutral, and pro-inflammatory foods with simple portion awareness.</p>
-      </article>
-      <article class="dimension-card">
-        <span class="dimension-icon">02</span>
-        <h3>Sleep</h3>
-        <p>Track duration and quality so recovery does not disappear into memory.</p>
-      </article>
-      <article class="dimension-card">
-        <span class="dimension-icon">03</span>
-        <h3>Movement</h3>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">02</span> 😴 Sleep</h3>
+        <p>Track duration and subjective quality so recovery doesn't disappear into memory.</p>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">03</span> 🏃 Movement</h3>
         <p>Capture low-impact activity, strength, yoga, or training without overcomplicating it.</p>
-      </article>
-      <article class="dimension-card">
-        <span class="dimension-icon">04</span>
-        <h3>Stress</h3>
-        <p>Note your nervous-system load with four lightweight states.</p>
-      </article>
-      <article class="dimension-card">
-        <span class="dimension-icon">05</span>
-        <h3>Supplements</h3>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">04</span> 🧘 Stress</h3>
+        <p>Note your nervous-system load with four lightweight states from calm to overwhelmed.</p>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">05</span> 💊 Supplements</h3>
         <p>Record optional basics like fish oil, vitamin D, magnesium, or probiotics.</p>
-      </article>
-      <article class="dimension-card">
-        <span class="dimension-icon">06</span>
-        <h3>Hydration</h3>
-        <p>Keep your daily water target visible and easy to update.</p>
-      </article>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">06</span> 💧 Hydration</h3>
+        <p>Keep your daily water target visible and easy to update throughout the day.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section workflow" id="insights">
-    <div class="workflow-copy">
-      <span class="eyebrow">How it works</span>
-      <h2>Record today. Understand the pattern.</h2>
-      <p class="lede">InflaScore is intentionally manual in its first version so you can build awareness before automation. Each daily log updates your score and trend view.</p>
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how section" id="how">
+  <div class="container">
+    <div class="how-split">
+      <div class="how-copy reveal">
+        <span class="badge badge-primary">How It Works</span>
+        <h2>Record today. Understand the pattern.</h2>
+        <p>InflaScore is intentionally manual in its first version so you can build awareness before automation. Each daily log updates your score and trend view.</p>
+      </div>
+      <div class="steps">
+        <div class="step-card reveal">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Open today</h3>
+            <p>Start with what you remember. The product is designed for imperfect real days, not lab-grade precision.</p>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Add quick entries</h3>
+            <p>Tap cards for food, sleep, movement, stress, supplements, and water. Average check-in takes about 2 minutes.</p>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Watch trends</h3>
+            <p>Use the score as a reflective guide for lifestyle experiments. See what actually moves the needle over days and weeks.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="timeline">
-      <article>
-        <span>1</span>
-        <h3>Open today</h3>
-        <p>Start with what you remember. The product is designed for imperfect real days.</p>
-      </article>
-      <article>
-        <span>2</span>
-        <h3>Add quick entries</h3>
-        <p>Tap cards for food, sleep, movement, stress, supplements, and water.</p>
-      </article>
-      <article>
-        <span>3</span>
-        <h3>Watch trends</h3>
-        <p>Use the score as a reflective guide for lifestyle experiments over time.</p>
-      </article>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section" id="cta">
+  <div class="container">
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;margin-bottom:16px;">Coming Soon</span>
+    <h2>Ready to quantify your calm?</h2>
+    <p>Join the first wave of InflaScore users. Turn daily choices into a calmer health signal.</p>
+    <div class="cta-actions">
+      <a class="btn btn-white btn-lg" href="#">
+        <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 16.56 2.93 11.3 4.7 7.72C5.57 5.94 7.36 4.83 9.28 4.8C10.56 4.78 11.76 5.68 12.54 5.68C13.31 5.68 14.78 4.58 16.35 4.75C17.02 4.78 18.85 5.02 20.03 6.76C19.93 6.83 17.67 8.15 17.69 10.87C17.72 14.14 20.56 15.18 20.59 15.19C20.56 15.27 20.12 16.72 19.06 18.2L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+        Download on the App Store
+      </a>
+      <a class="btn btn-outline-white btn-lg" href="mailto:support@inflascore.app">Contact Us</a>
     </div>
-  </section>
+  </div>
+</section>
+
 </main>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div><strong>InflaScore</strong><br>Wellness tracking only. Not medical diagnosis.</div>
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <div>
+      <div class="footer-brand">
+        <span class="brand-icon">I</span>
+        <span>InflaScore</span>
+      </div>
+      <div class="footer-disclaimer">Wellness tracking only. Not medical diagnosis.</div>
+    </div>
     <div class="footer-links">
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms & Conditions</a>
@@ -205,5 +342,13 @@
     </div>
   </div>
 </footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 </html>

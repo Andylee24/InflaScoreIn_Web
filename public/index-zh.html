@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>炎值 - 抗炎饮食与生活方式追踪器</title>
+  <meta name="description" content="把模糊的「我要吃得健康」变成可量化的「今日抗炎指数 82 分」。2 分钟记录饮食、睡眠、运动、压力、补剂和饮水。">
+  <meta property="og:title" content="炎值 - 抗炎生活方式追踪器">
+  <meta property="og:description" content="您的每日抗炎生活方式评分。2 分钟记录 6 个维度。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: 'Noto Sans SC', 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="site-header">
+  <nav class="nav container" aria-label="主导航">
+    <a class="brand" href="index-zh.html" aria-label="炎值首页">
+      <span class="brand-icon">I</span>
+      <span>炎值 InflaScore</span>
+    </a>
+    <div class="nav-links">
+      <a href="#score">抗炎指数</a>
+      <a href="#dimensions">六大维度</a>
+      <a href="#how">使用方法</a>
+      <a href="privacy-zh.html">隐私政策</a>
+    </div>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <a href="index.html">EN</a>
+        <a href="index-zh.html" class="active">中文</a>
+      </div>
+      <a class="btn btn-primary" href="#download">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        下载 App
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero container">
+  <div class="hero-content">
+    <span class="badge badge-primary">iOS 17+ &middot; SwiftUI &middot; 本地优先</span>
+    <h1>把每日选择，变成更平静的健康信号。</h1>
+    <p class="hero-sub">炎值将饮食、睡眠、运动、压力、补剂和饮水转化为一个简单的抗炎生活方式评分 —— 让你清楚看到什么真正有效。</p>
+    <div class="hero-actions" id="download">
+      <a class="btn btn-primary btn-lg" href="#">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 16.56 2.93 11.3 4.7 7.72C5.57 5.94 7.36 4.83 9.28 4.8C10.56 4.78 11.76 5.68 12.54 5.68C13.31 5.68 14.78 4.58 16.35 4.75C17.02 4.78 18.85 5.02 20.03 6.76C19.93 6.83 17.67 8.15 17.69 10.87C17.72 14.14 20.56 15.18 20.59 15.19C20.56 15.27 20.12 16.72 19.06 18.2L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+        App Store 即将上架
+      </a>
+      <a class="btn btn-ghost btn-lg" href="#score">了解评分体系</a>
+    </div>
+    <div class="hero-metrics">
+      <div>
+        <div class="metric-value">6</div>
+        <div class="metric-label">每日维度</div>
+      </div>
+      <div>
+        <div class="metric-value">0&ndash;100</div>
+        <div class="metric-label">生活方式评分</div>
+      </div>
+      <div>
+        <div class="metric-value">2 分钟</div>
+        <div class="metric-label">典型签到时长</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="phone-wrap">
+      <div class="phone-float phone-float-1">
+        <div style="color:var(--muted);font-size:.72rem;margin-bottom:2px;">今日评分</div>
+        <div class="val">82 &middot; 最佳</div>
+      </div>
+      <div class="phone-float phone-float-2">
+        <div style="color:var(--muted);font-size:.72rem;margin-bottom:2px;">周趋势</div>
+        <div class="val">+12%</div>
+      </div>
+
+      <div class="phone-device">
+        <div class="phone-screen">
+          <div class="app-status">
+            <div>
+              <div class="greeting">今天</div>
+              <div class="day">星期六</div>
+            </div>
+            <span class="status-chip">均衡</span>
+          </div>
+          <div class="app-score">
+            <div class="ring">
+              <div class="ring-inner">
+                <div class="score-num">82</div>
+                <div class="score-label">最佳</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-trend">
+            <div>
+              <div class="label">周趋势</div>
+              <div class="value">+12%</div>
+            </div>
+            <div class="mini-bars">
+              <span style="height:34%"></span>
+              <span style="height:56%"></span>
+              <span style="height:48%"></span>
+              <span style="height:72%"></span>
+              <span style="height:64%"></span>
+              <span style="height:84%"></span>
+            </div>
+          </div>
+          <div class="app-habits">
+            <div class="row"><span class="dot" style="background:var(--mint)"></span><span class="name">饮食</span><span class="pts">32 / 40</span></div>
+            <div class="row"><span class="dot" style="background:var(--blue)"></span><span class="name">睡眠</span><span class="pts">21 / 25</span></div>
+            <div class="row"><span class="dot" style="background:var(--coral)"></span><span class="name">运动</span><span class="pts">13 / 15</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section class="problem section">
+  <div class="container">
+    <div class="problem-header reveal">
+      <span class="badge badge-accent">为什么重要</span>
+      <h2>慢性炎症是沉默的。</h2>
+      <p>疲劳、脑雾、皮肤问题、消化不适 —— 这些日常信号往往源自生活方式塑造的炎症模式。</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="icon">&#x1F9E0;</div>
+        <h3>脑雾与疲劳</h3>
+        <p>神经炎症扰乱专注力和精力。睡眠不足和加工食品让这个循环持续运转。</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="icon">&#x1F41B;</div>
+        <h3>肠胃不适</h3>
+        <p>肠道是炎症的枢纽。你的饮食直接影响消化舒适度和免疫反应。</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="icon">&#x1FA7A;</div>
+        <h3>皮肤与恢复</h3>
+        <p>炎症标志物会反映在皮肤上，并拖慢身体恢复。生活方式模式才是根本原因。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features section">
+  <div class="container">
+    <div class="features-header reveal">
+      <span class="badge badge-primary">炎值的不同之处</span>
+      <h2>不是卡路里计算器，而是生活方式教练。</h2>
+      <p>我们不计算宏量营养素，也不假装能做诊断。我们帮你发现塑造身体感受的生活模式。</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">&#x1F4CA;</div>
+        <h3>一个简单的分数</h3>
+        <p>六个生活方式维度浓缩为一个 0&ndash;100 的抗炎指数。足够清晰可以行动，足够细腻值得参考。</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">&#x26A1;</div>
+        <h3>2 分钟签到</h3>
+        <p>没有卡路里数据库，没有复杂的仪表盘。轻点六张卡片即可完成。为真实的、不完美的一天而设计。</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">&#x1F512;</div>
+        <h3>本地 &middot; 私密</h3>
+        <p>所有数据保存在你的设备上。无云端同步，无需注册账号，无追踪。基于 iOS 17+ SwiftData 构建，真正的本地优先隐私。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCORE ===== -->
+<section class="score-section section" id="score">
+  <div class="container">
+    <div class="score-split">
+      <div class="score-visual reveal">
+        <div class="score-ring-wrap">
+          <div class="score-ring-lg">
+            <div class="ring-inner">
+              <div class="score-num">82</div>
+              <div class="score-label">最佳</div>
+            </div>
+          </div>
+        </div>
+        <div class="score-scale" style="max-width:320px;width:100%;">
+          <span>促炎</span>
+          <span>平稳</span>
+          <span>最佳</span>
+        </div>
+      </div>
+      <div class="score-copy reveal">
+        <span class="badge badge-primary">抗炎指数</span>
+        <h2>一个反映你生活方式的数字。</h2>
+        <p>这是一个 0 到 100 的行为指标。它帮你发现日常选择中的规律，而不假装诊断疾病或直接测量炎症水平。</p>
+        <div class="weight-list">
+          <div class="weight-item">
+            <div class="pct">40%</div>
+            <div>
+              <h4>饮食权重最大</h4>
+              <p>饮食塑造血糖波动、肠道负荷和身体每日应对的节律。</p>
+            </div>
+          </div>
+          <div class="weight-item">
+            <div class="pct">25%</div>
+            <div>
+              <h4>睡眠锚定恢复</h4>
+              <p>时长和主观质量代表修复窗口，让其余维度的评分更加可靠。</p>
+            </div>
+          </div>
+          <div class="weight-item">
+            <div class="pct">35%</div>
+            <div>
+              <h4>其余维度补全模式</h4>
+              <p>运动、压力、补剂和饮水将模糊的健康记录变成可见的每日信号。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIMENSIONS ===== -->
+<section class="dimensions section" id="dimensions">
+  <div class="container">
+    <div class="dims-header reveal">
+      <span class="badge badge-accent">六个每日维度</span>
+      <h2>快速签到，依然完整。</h2>
+      <p>没有卡路里数据库，没有复杂的仪表盘。只有对实用抗炎日常真正重要的生活方式信号。</p>
+    </div>
+    <div class="dims-grid">
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">01</span> 🥗 饮食</h3>
+        <p>记录抗炎、中性和促炎食物，搭配简单的份量感知。</p>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">02</span> 😴 睡眠</h3>
+        <p>追踪时长和主观质量，让恢复不再消失在记忆里。</p>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">03</span> 🏃 运动</h3>
+        <p>记录低强度活动、力量训练、瑜伽或锻炼，无需过度复杂化。</p>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">04</span> 🧘 压力</h3>
+        <p>用四种轻量状态记录你的神经系统负荷，从平静到不堪重负。</p>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">05</span> 💊 补剂</h3>
+        <p>记录可选的基础补剂，如鱼油、维生素 D、镁或益生菌。</p>
+      </div>
+      <div class="dim-card reveal">
+        <h3><span class="dim-num">06</span> 💧 饮水</h3>
+        <p>让你的每日饮水目标保持可见，随时轻松更新。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how section" id="how">
+  <div class="container">
+    <div class="how-split">
+      <div class="how-copy reveal">
+        <span class="badge badge-primary">使用方法</span>
+        <h2>记录今天，理解模式。</h2>
+        <p>炎值在首个版本中有意采用手动记录，让你在自动化之前先建立觉察。每次签到都会更新你的评分和趋势视图。</p>
+      </div>
+      <div class="steps">
+        <div class="step-card reveal">
+          <div class="step-num">1</div>
+          <div>
+            <h3>打开今天</h3>
+            <p>从你记得的开始。产品为不完美的真实日子而设计，而非实验室级别的精确。</p>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">2</div>
+          <div>
+            <h3>快速记录</h3>
+            <p>点击卡片记录饮食、睡眠、运动、压力、补剂和饮水。平均签到约 2 分钟。</p>
+          </div>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">3</div>
+          <div>
+            <h3>观察趋势</h3>
+            <p>将评分作为生活方式实验的反思指南。在数天和数周中观察什么真正有效。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section" id="cta">
+  <div class="container">
+    <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;margin-bottom:16px;">即将上架</span>
+    <h2>准备好量化你的平静了吗？</h2>
+    <p>成为炎值的第一批用户。把每日选择变成更平静的健康信号。</p>
+    <div class="cta-actions">
+      <a class="btn btn-white btn-lg" href="#">
+        <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.79 22.05 6.8 20.68 5.96 19.47C4.25 16.56 2.93 11.3 4.7 7.72C5.57 5.94 7.36 4.83 9.28 4.8C10.56 4.78 11.76 5.68 12.54 5.68C13.31 5.68 14.78 4.58 16.35 4.75C17.02 4.78 18.85 5.02 20.03 6.76C19.93 6.83 17.67 8.15 17.69 10.87C17.72 14.14 20.56 15.18 20.59 15.19C20.56 15.27 20.12 16.72 19.06 18.2L18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+        App Store 即将上架
+      </a>
+      <a class="btn btn-outline-white btn-lg" href="mailto:support@inflascore.app">联系我们</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner container">
+    <div>
+      <div class="footer-brand">
+        <span class="brand-icon">I</span>
+        <span>炎值 InflaScore</span>
+      </div>
+      <div class="footer-disclaimer">仅用于健康追踪，不构成医学诊断。</div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy-zh.html">隐私政策</a>
+      <a href="terms-zh.html">条款与条件</a>
+      <a href="mailto:support@inflascore.app">support@inflascore.app</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
