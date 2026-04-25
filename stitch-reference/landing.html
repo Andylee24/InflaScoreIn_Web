@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>InflaScore - Quantify Your Wellness Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#eafcff",
+                        "primary": "#006973",
+                        "error": "#ac3434",
+                        "on-secondary-fixed": "#643200",
+                        "surface-container-high": "#e8e8e4",
+                        "primary-fixed": "#9ff0fb",
+                        "surface-container-low": "#f4f4f0",
+                        "tertiary": "#426658",
+                        "on-primary-fixed-variant": "#00656f",
+                        "error-dim": "#70030f",
+                        "surface-bright": "#faf9f6",
+                        "primary-dim": "#005c65",
+                        "tertiary-fixed-dim": "#b0d7c5",
+                        "on-tertiary-fixed-variant": "#3b5f51",
+                        "surface": "#faf9f6",
+                        "on-secondary-fixed-variant": "#8a4b11",
+                        "tertiary-dim": "#365a4c",
+                        "secondary-fixed-dim": "#ffcaa4",
+                        "on-error": "#fff7f6",
+                        "on-primary-container": "#005b63",
+                        "inverse-primary": "#a1f2fe",
+                        "tertiary-container": "#bee6d3",
+                        "secondary-container": "#ffdcc4",
+                        "on-background": "#303330",
+                        "on-secondary-container": "#7e4205",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#006973",
+                        "primary-fixed-dim": "#90e1ec",
+                        "error-container": "#f56965",
+                        "outline-variant": "#b1b2af",
+                        "background": "#faf9f6",
+                        "surface-container": "#eeeeea",
+                        "on-tertiary-container": "#325547",
+                        "outline": "#797b78",
+                        "on-surface-variant": "#5d605c",
+                        "on-error-container": "#65000b",
+                        "secondary-fixed": "#ffdcc4",
+                        "secondary-dim": "#804307",
+                        "on-surface": "#303330",
+                        "surface-container-highest": "#e1e3df",
+                        "on-primary-fixed": "#00474d",
+                        "inverse-on-surface": "#9d9d9a",
+                        "tertiary-fixed": "#bee6d3",
+                        "secondary": "#8f4f14",
+                        "surface-dim": "#d9dbd6",
+                        "surface-variant": "#e1e3df",
+                        "primary-container": "#9ff0fb",
+                        "on-tertiary-fixed": "#1f4235",
+                        "on-secondary": "#fff7f4",
+                        "on-tertiary": "#e5fff1",
+                        "inverse-surface": "#0d0f0d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #faf9f6; color: #303330; }
+        .gradient-text {
+            background: linear-gradient(135deg, #006973 0%, #005c65 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .anti-inflammatory-gradient {
+            background: linear-gradient(90deg, #ac3434 0%, #ffcaa4 50%, #b0d7c5 100%);
+        }
+        .custom-shadow {
+            box-shadow: 0px 20px 40px rgba(48, 51, 48, 0.06);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen selection:bg-primary/20 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#faf9f6]/80 dark:bg-[#1a1c1a]/80 backdrop-blur-md font-['Plus_Jakarta_Sans'] tracking-[-0.02em]">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#006D77] dark:text-[#80d0d8]">InflaScore</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#303330] dark:text-[#e2e3de] font-medium hover:text-[#006D77] transition-colors duration-300" href="#">The Science</a>
+<a class="text-[#303330] dark:text-[#e2e3de] font-medium hover:text-[#006D77] transition-colors duration-300" href="#">Dimensions</a>
+<a class="text-[#303330] dark:text-[#e2e3de] font-medium hover:text-[#006D77] transition-colors duration-300" href="#">How it Works</a>
+<a class="text-[#303330] dark:text-[#e2e3de] font-medium hover:text-[#006D77] transition-colors duration-300" href="#">Resources</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-semibold hover:bg-primary-dim transition-colors hidden md:block">Get Started</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-24 grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8 z-10">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-[-0.02em] leading-tight text-on-surface">
+                    Quantify Your <br/>
+<span class="gradient-text">Wellness Journey</span>
+</h1>
+<p class="text-xl text-on-surface/80 leading-relaxed max-w-lg font-body">
+                    A sanctuary for your health data. Transform vague daily habits into a clear, actionable Anti-Inflammatory Score.
+                </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary-dim transition-all shadow-[0px_20px_40px_rgba(48,51,48,0.06)]">
+                        Get Started
+                    </button>
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-container/80 transition-all">
+                        Learn the Science
+                    </button>
+</div>
+</div>
+<div class="relative w-full aspect-[4/5] rounded-[3rem] overflow-hidden custom-shadow">
+<img alt="Hero Image" class="w-full h-full object-cover" data-alt="A serene woman practicing yoga in a sunlit, minimal modern living room with soft morning light, green plants, and warm beige tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgJAm2_zt2hZ1yC-0wILufxF871NGhShUChU3PLNsV5RbfwfPa151tfpfXxOj8DqajW86fswwIKqn_CoB9YLG_9UGz9gjAGtSym-gmY6tQUzzmvO39Y9TXshrL7aBOsPqGrot31s6qoDVCWcz1nTjOtWjb6OH3wrQRAZazoOZaNmvj0NqfvBUqsjRUKGT3hfrnVQ73WPR-5TeWrSUYbdQK8Ul_nKafNJ2SZBxOC6jpOpLkjjZd5rMGzQ7XinByAerjQG64ymDUO_4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface/40 to-transparent"></div>
+</div>
+</section>
+<!-- The Score Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-32 bg-surface-container-low rounded-[3rem] my-16 relative overflow-hidden">
+<!-- Decorative blob -->
+<div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary-container rounded-full blur-[100px] opacity-30 pointer-events-none"></div>
+<div class="grid md:grid-cols-2 gap-20 items-center relative z-10">
+<div class="flex justify-center items-center">
+<!-- Score Radial Visual -->
+<div class="relative w-80 h-80 bg-surface rounded-full flex items-center justify-center custom-shadow">
+<svg class="absolute inset-0 w-full h-full -rotate-90" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="45" stroke="#e1e3df" stroke-width="8"></circle>
+<circle class="transition-all duration-1000 ease-out" cx="50" cy="50" fill="none" r="45" stroke="url(#gradient)" stroke-dasharray="283" stroke-dashoffset="56" stroke-width="8"></circle>
+<defs>
+<lineargradient id="gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#ac3434"></stop>
+<stop offset="50%" stop-color="#ffcaa4"></stop>
+<stop offset="100%" stop-color="#b0d7c5"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="text-center">
+<span class="text-6xl font-extrabold tracking-[-0.02em] text-primary">82</span>
+<p class="text-sm uppercase tracking-widest font-semibold text-on-surface-variant mt-2">Optimal</p>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface">The Anti-Inflammatory Score</h2>
+<p class="text-lg text-on-surface/80 leading-relaxed font-body">
+                        We synthesize complex lifestyle data into a single, elegant metric. It's not just a number; it's a reflection of your body's restorative balance.
+                    </p>
+<ul class="space-y-4 pt-4">
+<li class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+</div>
+<span class="text-on-surface font-medium text-lg">Daily health quantification</span>
+</li>
+<li class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<span class="text-on-surface font-medium text-lg">Personalized trend analysis</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-24">
+<div class="text-center mb-20">
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight text-on-surface mb-6">Six Dimensions of Wellness</h2>
+<p class="text-lg text-on-surface/70 max-w-2xl mx-auto">A holistic approach to reducing inflammation, curated into manageable daily focuses.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Diet -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] custom-shadow group hover:bg-surface-container-low transition-colors duration-500">
+<div class="w-14 h-14 bg-tertiary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-2xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Diet</h3>
+<p class="text-on-surface/70 font-body leading-relaxed">Nourish your body with anti-inflammatory whole foods and mindful eating habits.</p>
+</div>
+<!-- Sleep -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] custom-shadow group hover:bg-surface-container-low transition-colors duration-500">
+<div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Sleep</h3>
+<p class="text-on-surface/70 font-body leading-relaxed">Optimize your restorative phases for deep, healing cellular repair.</p>
+</div>
+<!-- Movement -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] custom-shadow group hover:bg-surface-container-low transition-colors duration-500">
+<div class="w-14 h-14 bg-secondary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">directions_run</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Movement</h3>
+<p class="text-on-surface/70 font-body leading-relaxed">Fluid, consistent activity to enhance circulation and lower systemic stress.</p>
+</div>
+<!-- Stress -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] custom-shadow group hover:bg-surface-container-low transition-colors duration-500">
+<div class="w-14 h-14 bg-surface-container-highest rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-surface text-2xl" style="font-variation-settings: 'FILL' 1;">self_improvement</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Stress</h3>
+<p class="text-on-surface/70 font-body leading-relaxed">Cultivate calm through guided protocols to manage cortisol levels.</p>
+</div>
+<!-- Supplements -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] custom-shadow group hover:bg-surface-container-low transition-colors duration-500">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary-dim text-2xl" style="font-variation-settings: 'FILL' 1;">medication</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Supplements</h3>
+<p class="text-on-surface/70 font-body leading-relaxed">Targeted nutritional support to fill gaps and boost your natural resilience.</p>
+</div>
+<!-- Hydration -->
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] custom-shadow group hover:bg-surface-container-low transition-colors duration-500">
+<div class="w-14 h-14 bg-primary-fixed rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary-dim text-2xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-on-surface">Hydration</h3>
+<p class="text-on-surface/70 font-body leading-relaxed">Maintain cellular vitality with consistent, quality fluid intake.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f4f4f0] dark:bg-[#1c1c1a] w-full rounded-t-[3rem] font-['Plus_Jakarta_Sans'] text-sm tracking-wide">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-7xl mx-auto gap-8">
+<div class="text-xl font-bold text-[#006D77]">InflaScore</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="text-[#303330]/60 dark:text-[#e2e3de]/60 hover:text-[#006D77] dark:hover:text-[#80d0d8] transition-opacity hover:opacity-80" href="#">Privacy Policy</a>
+<a class="text-[#303330]/60 dark:text-[#e2e3de]/60 hover:text-[#006D77] dark:hover:text-[#80d0d8] transition-opacity hover:opacity-80" href="#">Terms of Service</a>
+<a class="text-[#303330]/60 dark:text-[#e2e3de]/60 hover:text-[#006D77] dark:hover:text-[#80d0d8] transition-opacity hover:opacity-80" href="#">Contact</a>
+<a class="text-[#303330]/60 dark:text-[#e2e3de]/60 hover:text-[#006D77] dark:hover:text-[#80d0d8] transition-opacity hover:opacity-80" href="#">App Store</a>
+<a class="text-[#303330]/60 dark:text-[#e2e3de]/60 hover:text-[#006D77] dark:hover:text-[#80d0d8] transition-opacity hover:opacity-80" href="#">Google Play</a>
+</div>
+<div class="text-[#303330]/60 dark:text-[#e2e3de]/60 text-center md:text-right">
+                © 2024 InflaScore. A Sanctuary for Personal Health.
+            </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InflaScore - Anti-Inflammatory Lifestyle Tracker</title>
+  <meta name="description" content="A lightweight wellness tracker that turns daily habits into an anti-inflammatory lifestyle score.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="InflaScore home">
+      <span class="brand-mark">I</span>
+      <span>InflaScore</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#score">Score</a>
+      <a href="index.html#daily">Daily log</a>
+      <a href="index.html#insights">Insights</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <a class="button button-primary nav-cta" href="index.html#download">Get the app</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">Anti-inflammatory lifestyle tracker</span>
+      <h1>Turn daily choices into a calmer health signal.</h1>
+      <p class="hero-copy">InflaScore helps you log food, sleep, movement, stress, supplements, and hydration, then translates those habits into one simple lifestyle score.</p>
+      <div class="actions" id="download">
+        <a class="button button-primary" href="#">App Store coming soon</a>
+        <a class="button button-secondary" href="#score">Explore the score</a>
+      </div>
+      <dl class="hero-stats" aria-label="InflaScore tracking summary">
+        <div><dt>6</dt><dd>daily dimensions</dd></div>
+        <div><dt>0-100</dt><dd>behavior score</dd></div>
+        <div><dt>2 min</dt><dd>typical check-in</dd></div>
+      </dl>
+    </div>
+
+    <div class="product-stage" aria-label="InflaScore app preview">
+      <div class="phone-shell">
+        <div class="phone-screen">
+          <div class="app-top">
+            <div>
+              <span>Today</span>
+              <strong>Saturday</strong>
+            </div>
+            <span class="status-pill">Balanced</span>
+          </div>
+          <div class="score-orbit">
+            <div class="score-ring">
+              <div class="score-ring-inner"><strong>82</strong><span>Optimal</span></div>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div>
+              <span>Weekly trend</span>
+              <strong>+12%</strong>
+            </div>
+            <div class="mini-bars" aria-hidden="true">
+              <span style="height: 34%"></span>
+              <span style="height: 56%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 72%"></span>
+              <span style="height: 64%"></span>
+              <span style="height: 84%"></span>
+            </div>
+          </div>
+          <div class="habit-list">
+            <div><span class="dot green"></span><strong>Diet</strong><em>32 / 40</em></div>
+            <div><span class="dot blue"></span><strong>Sleep</strong><em>21 / 25</em></div>
+            <div><span class="dot coral"></span><strong>Movement</strong><em>13 / 15</em></div>
+          </div>
+        </div>
+      </div>
+      <div class="floating-note note-one">
+        <strong>Manual first</strong>
+        <span>Build awareness before automation.</span>
+      </div>
+      <div class="floating-note note-two">
+        <strong>No diagnosis</strong>
+        <span>A behavior guide, not a lab test.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section intro-strip" id="score">
+    <div>
+      <span class="eyebrow">One calm metric</span>
+      <h2>The anti-inflammatory score is built for reflection.</h2>
+    </div>
+    <p class="lede">The score is a lifestyle behavior indicator from 0 to 100. It helps you notice patterns across everyday choices without pretending to diagnose disease or measure inflammation directly.</p>
+  </section>
+
+  <section class="section score-layout">
+    <article class="score-panel">
+      <div class="score-ring score-ring-large">
+        <div class="score-ring-inner"><strong>82</strong><span>Optimal</span></div>
+      </div>
+      <div class="score-scale" aria-label="Score scale from low to optimal">
+        <span>Low</span>
+        <span>Steady</span>
+        <span>Optimal</span>
+      </div>
+    </article>
+    <div class="weight-grid">
+      <article class="weight-card">
+        <span>40%</span>
+        <h3>Diet carries the most weight</h3>
+        <p>Meals shape glucose swings, gut load, and the daily rhythm your body has to respond to.</p>
+      </article>
+      <article class="weight-card">
+        <span>25%</span>
+        <h3>Sleep anchors recovery</h3>
+        <p>Duration and subjective quality represent the repair window that keeps the rest of the score honest.</p>
+      </article>
+      <article class="weight-card">
+        <span>35%</span>
+        <h3>The rest completes the pattern</h3>
+        <p>Movement, stress, supplements, and water turn vague wellness notes into visible daily signals.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="daily">
+    <div class="section-heading">
+      <span class="eyebrow">Six daily dimensions</span>
+      <h2>A fast check-in that still feels complete.</h2>
+      <p class="lede">No calorie database. No overbuilt dashboards. Just the lifestyle signals that matter for a practical anti-inflammatory routine.</p>
+    </div>
+    <div class="dimension-grid">
+      <article class="dimension-card">
+        <span class="dimension-icon">01</span>
+        <h3>Diet</h3>
+        <p>Log anti-inflammatory, neutral, and pro-inflammatory foods with simple portion awareness.</p>
+      </article>
+      <article class="dimension-card">
+        <span class="dimension-icon">02</span>
+        <h3>Sleep</h3>
+        <p>Track duration and quality so recovery does not disappear into memory.</p>
+      </article>
+      <article class="dimension-card">
+        <span class="dimension-icon">03</span>
+        <h3>Movement</h3>
+        <p>Capture low-impact activity, strength, yoga, or training without overcomplicating it.</p>
+      </article>
+      <article class="dimension-card">
+        <span class="dimension-icon">04</span>
+        <h3>Stress</h3>
+        <p>Note your nervous-system load with four lightweight states.</p>
+      </article>
+      <article class="dimension-card">
+        <span class="dimension-icon">05</span>
+        <h3>Supplements</h3>
+        <p>Record optional basics like fish oil, vitamin D, magnesium, or probiotics.</p>
+      </article>
+      <article class="dimension-card">
+        <span class="dimension-icon">06</span>
+        <h3>Hydration</h3>
+        <p>Keep your daily water target visible and easy to update.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section workflow" id="insights">
+    <div class="workflow-copy">
+      <span class="eyebrow">How it works</span>
+      <h2>Record today. Understand the pattern.</h2>
+      <p class="lede">InflaScore is intentionally manual in its first version so you can build awareness before automation. Each daily log updates your score and trend view.</p>
+    </div>
+    <div class="timeline">
+      <article>
+        <span>1</span>
+        <h3>Open today</h3>
+        <p>Start with what you remember. The product is designed for imperfect real days.</p>
+      </article>
+      <article>
+        <span>2</span>
+        <h3>Add quick entries</h3>
+        <p>Tap cards for food, sleep, movement, stress, supplements, and water.</p>
+      </article>
+      <article>
+        <span>3</span>
+        <h3>Watch trends</h3>
+        <p>Use the score as a reflective guide for lifestyle experiments over time.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><strong>InflaScore</strong><br>Wellness tracking only. Not medical diagnosis.</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="mailto:support@inflascore.app">support@inflascore.app</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
