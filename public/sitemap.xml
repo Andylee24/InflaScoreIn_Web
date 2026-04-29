@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://inflascore.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflascore.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://inflascore.app/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflascore.app/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://inflascore.app/index-zh.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflascore.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://inflascore.app/index-zh.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inflascore.app/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://inflascore.app/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflascore.app/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://inflascore.app/privacy-zh.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://inflascore.app/privacy-zh.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflascore.app/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://inflascore.app/privacy-zh.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://inflascore.app/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflascore.app/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://inflascore.app/terms-zh.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://inflascore.app/terms-zh.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inflascore.app/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://inflascore.app/terms-zh.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
